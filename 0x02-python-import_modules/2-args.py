@@ -10,7 +10,7 @@ def main():
         print("{:d} argument:".format(argc - 1))
         print("{:d}: {}".format(i, sys.argv[i]))
     elif argc > 2:
-        print("{:d} arguments".format(argc - 1))
+        print("{:d} arguments:".format(argc - 1))
         i = 1
         while i < argc:
             print("{:d}: {}".format(i, sys.argv[i]))
