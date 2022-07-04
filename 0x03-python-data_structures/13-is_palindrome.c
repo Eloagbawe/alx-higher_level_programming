@@ -44,12 +44,13 @@ int is_palindrome(listint_t **head)
 
 	while (*head && reverse_copy)
 	{
-		if ((*head)->n != reverse_copy->n)
+		if ((*head)->n == reverse_copy->n)
 		{
-			return (0);
+			*head = (*head)->next;
+			reverse_copy = reverse_copy->next;
 		}
-		*head = (*head)->next;
-		reverse_copy = reverse_copy->next;
+		else
+			return (0);
 	}
 	return (1);
 }
