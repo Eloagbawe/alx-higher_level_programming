@@ -35,22 +35,20 @@ listint_t *reverse(listint_t *head)
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *temp, *reverse_copy;
+	listint_t *reverse_copy;
 
 	if (head == NULL || *head == NULL)
 		return (1);
 
-	temp = *head;
 	reverse_copy = reverse(*head);
-	if (reverse_copy == NULL)
-		return (0);
-	while (reverse_copy && temp)
+
+	while (reverse_copy && *head)
 	{
-		if (temp->n != reverse_copy->n)
+		if ((*head)->n != reverse_copy->n)
 		{
 			return (0);
 		}
-		temp = temp->next;
+		*head = (*head)->next;
 		reverse_copy = reverse_copy->next;
 	}
 	return (1);
