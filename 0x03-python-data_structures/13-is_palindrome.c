@@ -18,6 +18,8 @@ listint_t *reverse(listint_t *head)
 	while (head != NULL)
 	{
 		temp = (listint_t *) malloc(sizeof(listint_t));
+		if (temp == NULL)
+			return (NULL);
 		temp->n = head->n;
 		temp->next = new_head;
 		new_head = temp;
