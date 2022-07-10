@@ -14,3 +14,11 @@ solution to high level programming exercises
 11. Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line - Use the function write from the sys module
 12. Write a script that compiles a Python script file. The Python file name will be stored in the environment variable $PYFILE
 13. Write the Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode:
+
+| :-: | :-------------: | :-----:|
+| 3   | 0 LOAD_CONST    | 1 (98) |
+|     | 3 LOAD_FAST     | 0 (a)  |
+|     | 6 LOAD_FAST     | 1 (b)  |
+|     | 9 BINARY_POWER  |        |
+|     | 10 BINARY_ADD   |        |
+|     | 11 RETURN_VALUE |        |
