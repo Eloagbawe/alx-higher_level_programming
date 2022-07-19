@@ -5,9 +5,9 @@ This module defines a Square class
 
 """
 
-class Square:
-    
-    """An empty class called square
 
+class Square:
+
+    """Empty class called Square
     """
     pass
