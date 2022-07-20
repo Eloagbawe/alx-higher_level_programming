@@ -7,7 +7,7 @@ import math
 
 class MagicClass:
     """MagicClass representing a circle"""
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """Initialize a magicClass
 
         Args:
@@ -21,8 +21,8 @@ class MagicClass:
 
     def area(self):
         """returns the area"""
-        return self.__radius ** 2 * math.pi
+        return (self.__radius ** 2 * math.pi)
 
     def circumference(self):
         """returns the circumference"""
-        return 2 * math.pi * self.__radius
+        return (2 * math.pi * self.__radius)
