@@ -6,12 +6,13 @@ import math
 
 
 class MagicClass:
+    """MagicClass representing a circle"""
     def __init__(self, radius):
-        """
-        Initialize a magicClass
+        """Initialize a magicClass
 
         Args:
         radius(int or float)
+
         """
         self.__radius = 0
         if type(radius) is not int or type(radius) is not float:
