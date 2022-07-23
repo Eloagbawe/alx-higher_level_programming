@@ -1,6 +1,7 @@
 solution to high level programming exercises
 
 0. Write a function that adds 2 integers
+
         Prototype: def add_integer(a, b=98):
         a and b must be integers or floats, otherwise raise a TypeError exception with the message a must be an integer or b must be an integer
         a and b must be first casted to integers if they are float
@@ -8,6 +9,7 @@ solution to high level programming exercises
         You are not allowed to import any module
 
 1. Write a function that divides all elements of a matrix
+
         Prototype: def matrix_divided(matrix, div):
         matrix must be a list of lists of integers or floats, otherwise raise a TypeError exception with the message matrix must be a matrix (list of lists) of integers/floats
         Each row of the matrix must be of the same size, otherwise raise a TypeError exception with the message Each row of the matrix must have the same size
@@ -18,11 +20,13 @@ solution to high level programming exercises
         You are not allowed to import any module
 
 2. Write a function that prints My name is <first name> <last name>
+
         Prototype: def say_my_name(first_name, last_name=""):
         first_name and last_name must be strings otherwise, raise a TypeError exception with the message first_name must be a string or last_name must be a string
         You are not allowed to import any module
 
 3. Write a function that prints a square with the character #
+
         Prototype: def print_square(size):
         size is the size length of the square
         size must be an integer, otherwise raise a TypeError exception with the message size must be an integer
@@ -31,6 +35,7 @@ solution to high level programming exercises
         You are not allowed to import any module
 
 4. Write a function that prints a text with 2 new lines after each of these characters: ., ? and :
+
         Prototype: def text_indentation(text):
         text must be a string, otherwise raise a TypeError exception with the message text must be a string
         There should be no space at the beginning or at the end of each printed line
