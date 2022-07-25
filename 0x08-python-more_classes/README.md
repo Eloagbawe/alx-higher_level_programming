@@ -30,3 +30,7 @@ solution to higher level programming exercises
         print() and str() should print the rectangle with the character #:
             if width or height is equal to 0, return an empty string
         You are not allowed to import any module
+
+4. Write a class Rectangle that defines a rectangle by: (based on 3-rectangle.py)
+
+        repr() should return a string representation of the rectangle to be able to recreate a new instance by using eval()
