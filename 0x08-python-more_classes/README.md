@@ -34,3 +34,7 @@ solution to higher level programming exercises
 4. Write a class Rectangle that defines a rectangle by: (based on 3-rectangle.py)
 
         repr() should return a string representation of the rectangle to be able to recreate a new instance by using eval()
+
+5. Write a class Rectangle that defines a rectangle by: (based on 4-rectangle.py)
+
+        Print the message Bye rectangle... (... being 3 dots not ellipsis) when an instance of Rectangle is deleted
