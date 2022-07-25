@@ -50,6 +50,7 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.__height + self.__width)
+
     def __str__(self):
         """returns a string that represents the rectangle with '#' """
         rec_string = ''
@@ -59,5 +60,6 @@ class Rectangle:
             for i in range(self.__height):
                 for j in range(self.__width):
                     rec_string += '#'
-                rec_string += '\n'        
+                if i is not self.height - 1:
+                    rec_string += '\n'        
         return rec_string
