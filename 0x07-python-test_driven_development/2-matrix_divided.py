@@ -34,7 +34,7 @@ def matrix_divided(matrix, div):
         raise TypeError("Each row of the matrix must have the same size")
     elif not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
-    elif div is 0:
+    elif div == 0:
         raise ZeroDivisionError("division by zero")
     else:
         for elem in matrix:
