@@ -129,4 +129,7 @@ solution to higher level programming exercises
 
 21.     a = (1, 2)
     Is a a tuple? Answer with Yes or No.
+
+22.     a = (1)
+    Is a a tuple? Answer with Yes or No. 
     
