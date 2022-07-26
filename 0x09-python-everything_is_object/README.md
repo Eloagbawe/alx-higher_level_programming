@@ -153,3 +153,11 @@ solution to higher level programming exercises
         a = ()
         b = ()
         a is b
+
+27.     >>> id(a)
+        139926795932424
+        >>> a
+        [1, 2, 3, 4]
+        >>> a = a + [5]
+        >>> id(a)
+Will the last line of this script print 139926795932424? Answer with Yes or No.
