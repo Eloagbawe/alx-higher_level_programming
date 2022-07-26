@@ -27,4 +27,10 @@ solution to higher level programming exercises
 
         >>> a = 89
         >>> b = a + 1
+
+6. What do these 3 lines print?
+
+        >>> s1 = "Best School"
+        >>> s2 = s1
+        >>> print(s1 == s2)
     
