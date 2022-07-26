@@ -57,4 +57,10 @@ solution to higher level programming exercises
         >>> l1 = [1, 2, 3]
         >>> l2 = [1, 2, 3] 
         >>> print(l1 == l2)
+
+11. What do these 3 lines print?
+
+        >>> l1 = [1, 2, 3]
+        >>> l2 = [1, 2, 3] 
+        >>> print(l1 is l2)
     
