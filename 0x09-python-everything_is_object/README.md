@@ -39,4 +39,10 @@ solution to higher level programming exercises
         >>> s1 = "Best"
         >>> s2 = s1
         >>> print(s1 is s2)
+
+8. What do these 3 lines print?
+
+        >>> s1 = "Best School"
+        >>> s2 = "Best School"
+        >>> print(s1 == s2)
     
