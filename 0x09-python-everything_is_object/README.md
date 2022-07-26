@@ -170,8 +170,15 @@ Will the last line of this script print 139926795932424? Answer with Yes or No.
         >>> id(a)
 Will the last line of this script print 139926795932424? Answer with Yes or No.
 
-100. Write a function magic_string() that returns a string “BestSchool” n times the number of the iteration
+29. Write a function magic_string() that returns a string “BestSchool” n times the number of the iteration
         Your file should be maximum 4-line long (no documentation needed)
         You are not allowed to import any module
 
-101. Write a class LockedClass with no class or object attribute, that prevents the user from dynamically creating new instance attributes, except if the new instance attribute is called first_name.
+30. Write a class LockedClass with no class or object attribute, that prevents the user from dynamically creating new instance attributes, except if the new instance attribute is called first_name.
+
+31.     a = 1
+        b = 1
+        
+Assuming we are using a CPython implementation of Python3 with default options/configuration:
+        How many int objects are created by the execution of the first line of the script? (103-line1.txt)
+        How many int objects are created by the execution of the second line of the script (103-line2.txt)
