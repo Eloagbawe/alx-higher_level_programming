@@ -89,4 +89,13 @@ solution to higher level programming exercises
         l2 = l1
         l1 = l1 + [4]
         print(l2)
+
+16. What does this script print?
+
+        def increment(n):
+            n += 1
+
+        a = 1
+        increment(a)
+        print(a)
     
