@@ -53,7 +53,8 @@ solution to high level programming exercises
 
 6. Write a function that multiplies 2 matrices:
 
-        Read: [Matrix multiplication - only Matrix product (two matrices)](https://en.wikipedia.org/wiki/Matrix_multiplication)
+Read: 
+[Matrix multiplication - only Matrix product (two matrices)](https://en.wikipedia.org/wiki/Matrix_multiplication)
 
         Prototype: def matrix_mul(m_a, m_b):
         m_a and m_b must be validated with these requirements in this order
@@ -76,8 +77,9 @@ solution to high level programming exercises
 
         Prototype: void print_python_string(PyObject *p);
         Format: see example
-        If p is not a valid string, print an error message (see example)
-        Read: [Unicode HOWTO](https://docs.python.org/3.4/howto/unicode.html)
+        If p is not a valid string, print an error message
+        
+Read: [Unicode HOWTO](https://docs.python.org/3.4/howto/unicode.html)
 
         About:
         Python version: 3.4
