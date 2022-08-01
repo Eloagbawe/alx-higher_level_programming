@@ -72,4 +72,17 @@ Test cases for ``MyList`` class
           ...
     TypeError: '<' not supported between instances of 'str' and 'int'
 
+    >>> x = [1, 0, 2]
+    >>> my_list = MyList(x)
+    >>> my_list
+    [1, 0, 2]
+    >>> my_list.print_sorted()
+    [0, 1, 2]
+
+    >>> my_listt.print_sorted()
+    Traceback (most recent call last):
+        ...
+    NameError: name 'my_listt' is not defined
+
+
 
