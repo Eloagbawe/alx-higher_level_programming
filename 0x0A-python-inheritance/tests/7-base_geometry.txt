@@ -25,6 +25,11 @@ Test cases for ``BaseGeometry`` class
         ...
     TypeError: perimeter must be an integer
 
+    >>> bg.integer_validator("name", True)
+    Traceback (most recent call last):
+        ...
+    TypeError: name must be an integer
+
     >>> bg.integer_validator("perimeter", {'length': 3, 'width': 18})
     Traceback (most recent call last):
         ...
@@ -54,6 +59,11 @@ Test cases for ``BaseGeometry`` class
     Traceback (most recent call last):
         ...
     TypeError: area() takes 1 positional argument but 2 were given
+
+    >>> bg.area(8, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: area() takes 1 positional argument but 3 were given
 
     >>> bg.integer_validator("length", 89, 32)
     Traceback (most recent call last):
