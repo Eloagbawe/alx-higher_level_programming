@@ -5,7 +5,11 @@
 
 def lookup(obj):
     """returns the list of available attributes and methods of an object
+
+        Args:
+        obj - object
+
+        Returns: list object of attributes and methods of obj
     """
 
-    x = obj()
-    return dir(x)
+    return dir(obj)
