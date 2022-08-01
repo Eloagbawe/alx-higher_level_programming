@@ -40,6 +40,11 @@ Test cases for ``BaseGeometry`` class
         ...
     TypeError: perimeter must be an integer
 
+    >>> bg.integer_validator("name", (1, 5))
+    Traceback (most recent call last):
+        ...
+    TypeError: name must be an integer
+
     >>> bg.integer_validator("height", -2)
     Traceback (most recent call last):
         ...
@@ -79,18 +84,3 @@ Test cases for ``BaseGeometry`` class
     Traceback (most recent call last):
         ...
     TypeError: integer_validator() takes 3 positional arguments but 4 were given
-
-    >>> try:
-    ...     bg.integer_validator("age", 0)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    ...
-    [ValueError] age must be greater than 0
-
-
-    >>> try:
-    ...     bg.integer_validator("distance", 4.5)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    ...
-    [TypeError] distance must be an integer
