@@ -30,6 +30,11 @@ Test cases for ``BaseGeometry`` class
         ...
     TypeError: name must be an integer
 
+    >>> bg.integer_validator("name", 6.4)
+    Traceback (most recent call last):
+        ...
+    TypeError: name must be an integer
+
     >>> bg.integer_validator("perimeter", {'length': 3, 'width': 18})
     Traceback (most recent call last):
         ...
@@ -39,6 +44,11 @@ Test cases for ``BaseGeometry`` class
     Traceback (most recent call last):
         ...
     ValueError: height must be greater than 0
+
+    >>> bg.integer_validator("age", 0)
+    Traceback (most recent call last):
+        ...
+    ValueError: age must be greater than 0
 
     >>> bg.integer_validator("height")
     Traceback (most recent call last):
