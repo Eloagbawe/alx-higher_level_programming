@@ -1,9 +1,14 @@
 Test cases for ``MyList`` class
 
 ============================
+Using ``MyList``
+----------------
+
+First import ``MyList`` from the ``1-my_list`` module:
 
     >>> MyList = __import__('1-my_list').MyList
 
+Now use it:
     >>> my_list = MyList()
     >>> my_list
     []
