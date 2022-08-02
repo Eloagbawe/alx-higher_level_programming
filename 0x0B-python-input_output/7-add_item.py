@@ -12,7 +12,7 @@ filename = "add_item.json"
 
 if os.path.isfile(filename):
     new_list = load_from_json_file(filename)
-    new_list += sys.argv[1:]
 else:
     new_list = []
+new_list.extend(sys.argv[1:])
 save_to_json_file(new_list, filename)
