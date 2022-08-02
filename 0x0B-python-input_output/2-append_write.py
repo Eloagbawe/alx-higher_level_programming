@@ -3,7 +3,7 @@
 
 
 def append_write(filename="", text=""):
-    """writes content to a file"""
+    """appends content to a file"""
     with open(filename, 'a', encoding="utf-8") as f:
         text = str(text)
         return f.write(text)
