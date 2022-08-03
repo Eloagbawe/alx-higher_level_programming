@@ -78,3 +78,13 @@ solution to higher level programming exercises
                 If attrs is a list of strings, only attribute names contained in this list must be retrieved.
                 Otherwise, all attributes must be retrieved
         You are not allowed to import any module
+
+11. Write a class Student that defines a student by: (based on 10-student.py)
+
+        Public method def reload_from_json(self, json): that replaces all attributes of the Student instance:
+                You can assume json will always be a dictionary
+                A dictionary key will be the public attribute name
+                A dictionary value will be the value of the public attribute
+        You are not allowed to import any module
+
+        Now, you have a simple implementation of a serialization and deserialization mechanism (concept of representation of an object to another format, without losing any information and allow us to rebuild an object based on this representation)
