@@ -13,11 +13,12 @@ class Student:
 
     def to_json(self, attrs=None):
         """retrieves a dictionary representation of a Student instance"""
-        if attrs is None:
+        if attrs is not None and all(isinstance(x, str) for x in attrs):
+            new_dict = {}
+            for x in attrs:
+                for y in self.__dict__:
+                    if x == y:
+                        new_dict.update({y : self.__dict__[y]})
+            return new_dict
+        else:
             return self.__dict__
-        new_dict = {}
-        for x in attrs:
-            for y in self.__dict__:
-                if x == y:
-                    new_dict.update({y : self.__dict__[y]})
-        return new_dict
