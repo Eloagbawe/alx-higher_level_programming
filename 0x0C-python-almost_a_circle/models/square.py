@@ -13,7 +13,7 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """returns the size property which 
+        """returns the size property which
         is the same as the width and height
         """
         return self.width
@@ -26,7 +26,7 @@ class Square(Rectangle):
     def __str__(self):
         """public str method"""
         return "[Square] ({:d}) {:d}/{:d} - {:d}"\
-            .format(self.id, self.x,self.y, self.width)
+            .format(self.id, self.x, self.y, self.width)
 
     def update(self, *args, **kwargs):
         """update square attributes
