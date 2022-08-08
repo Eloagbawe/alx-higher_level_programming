@@ -13,7 +13,9 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """returns the size property which is the same as the width and height"""
+        """returns the size property which 
+        is the same as the width and height
+        """
         return self.width
 
     @size.setter
@@ -23,7 +25,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """public str method"""
-        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({:d}) {:d}/{:d} - {:d}"\
+            .format(self.id, self.x,self.y, self.width)
 
     def update(self, *args, **kwargs):
         """update square attributes
@@ -40,4 +43,3 @@ class Square(Rectangle):
     def to_dictionary(self):
         """returns a dictionary representation of a rectangle"""
         return {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
-

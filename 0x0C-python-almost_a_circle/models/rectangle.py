@@ -85,7 +85,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """str rectangle function"""
-        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"\
+            .format(self.id, self.x, self.y, self.width, self.height)
 
     # def update(self, *args):
     #     """assigns an argument to each attribute"""
@@ -109,7 +110,7 @@ class Rectangle(Base):
         #     self.__y = args[4]
         # except IndexError:
         #     pass
-        
+
     def update(self, *args, **kwargs):
         """update rectangle attributes
         """
@@ -123,4 +124,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """returns a dictionary representation of a rectangle"""
-        return {"id": self.id, "width": self.width, "height": self.height, "x": self.x, "y": self.y}
+        return {
+            "id": self.id, "width": self.width, "height": self.height,
+            "x": self.x, "y": self.y
+            }
