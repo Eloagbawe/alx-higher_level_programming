@@ -4,6 +4,7 @@
 
 import json
 import os
+import csv
 
 
 class Base:
@@ -67,3 +68,34 @@ class Base:
             content = f.read()
             formattedContent = (cls.from_json_string(content))
             return [cls.create(**item) for item in formattedContent]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        filename = cls.__name__ + ".csv"
+        content = ""
+        if list_objs is not None:
+            content += ','.join(list_objs[0].to_dictionary().keys())
+            content += '\n'
+            for lst in list_objs:
+                content += ','.join(
+                    map(str, lst.to_dictionary().values())
+                )
+                content += '\n'
+
+        with open(filename, mode="w", encoding="utf-8") as f:
+            return f.write(content)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """load from csv"""
+        filename = cls.__name__ + ".csv"
+        object_created = []
+
+        with open(filename, 'r') as f:
+            header = f.readline().replace('\n', '').split(',')
+            for el in f.readlines():
+                values = map(int, el.replace('\n', '').split(','))
+                data = dict(zip(header, values))
+                object_created.append(cls.create(**data))
+
+        return object_created
