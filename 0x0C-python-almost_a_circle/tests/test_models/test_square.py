@@ -14,8 +14,8 @@ class TestSquare(unittest.TestCase):
     def test_initialization_success(self):
         s1 = Square(5)
         s2 = Square(10)
-        self.assertEqual(s1.id, 28)
-        self.assertEqual(s2.id, 29)
+        self.assertEqual(s1.id, 34)
+        self.assertEqual(s2.id, 35)
 
     def test_initialization_without_arguments(self):
 
@@ -156,6 +156,20 @@ class TestSquareUpdate(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             s.update(size=-3)
 
+class TestSquare_order_of_initialization(unittest.TestCase):
+    """Unittests for testing order of Square attribute initialization."""
+
+    def test_size_before_x(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square("invalid size", "invalid x")
+
+    def test_size_before_y(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square("invalid size", 1, "invalid y")
+
+    def test_x_before_y(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(1, "invalid x", "invalid y")
 
 if __name__ == '__main__':
     unittest.main()
