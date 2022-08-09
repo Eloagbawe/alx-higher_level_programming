@@ -3,6 +3,8 @@
 """
 
 import unittest
+from models.base import Base
+from models.rectangle import Rectangle
 from models.square import Square
 
 
@@ -12,8 +14,8 @@ class TestSquare(unittest.TestCase):
     def test_initialization_success(self):
         s1 = Square(5)
         s2 = Square(10)
-        self.assertEqual(s1.id, 9)
-        self.assertEqual(s2.id, 10)
+        self.assertEqual(s1.id, 28)
+        self.assertEqual(s2.id, 29)
 
     def test_initialization_without_arguments(self):
 
