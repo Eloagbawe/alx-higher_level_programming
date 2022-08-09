@@ -14,8 +14,8 @@ class TestSquare(unittest.TestCase):
     def test_initialization_success(self):
         s1 = Square(5)
         s2 = Square(10)
-        self.assertEqual(s1.id, 34)
-        self.assertEqual(s2.id, 35)
+        self.assertEqual(s1.id, 46)
+        self.assertEqual(s2.id, 47)
 
     def test_initialization_without_arguments(self):
 
@@ -61,6 +61,27 @@ class TestSquareSize(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square("invalid")
 
+    def test_float_size(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square(5.5)
+
+    def test_complex_size(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square(complex(5))
+
+    def test_dict_size(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square({"a": 1, "b": 2}, 2)
+
+
+    def test_list_size(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square([1, 2, 3])
+
+    def test_tuple_size(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square((1, 2, 3), 2, 3)
+    
     def test_negative_size(self):
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Square(-1, 2)
