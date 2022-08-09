@@ -115,5 +115,47 @@ class TestSquareArea(unittest.TestCase):
             s.area(1)
 
 
+class TestSquareUpdate(unittest.TestCase):
+    def test_update_args_zero(self):
+        s = Square(10, 10, 10, 10)
+        s.update()
+        self.assertEqual("[Square] (10) 10/10 - 10", str(s))
+
+    def test_update_args_one(self):
+        s = Square(10, 10, 10, 10)
+        s.update(89)
+        self.assertEqual("[Square] (89) 10/10 - 10", str(s))
+
+    def test_update_args_invalid_size_type(self):
+        s = Square(10, 10, 10, 10)
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            s.update(89, "invalid")
+
+    def test_update_args_size_zero(self):
+        s = Square(10, 10, 10, 10)
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            s.update(89, 0)
+
+    def test_update_kwargs_one(self):
+        s = Square(10, 10, 10, 10)
+        s.update(id=1)
+        self.assertEqual("[Square] (1) 10/10 - 10", str(s))
+
+    def test_update_kwargs_width_setter(self):
+        s = Square(10, 10, 10, 10)
+        s.update(id=89, size=8)
+        self.assertEqual(8, s.width)
+
+    def test_update_kwargs_size_zero(self):
+        s = Square(10, 10, 10, 10)
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            s.update(size=0)
+
+    def test_update_kwargs_size_negative(self):
+        s = Square(10, 10, 10, 10)
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            s.update(size=-3)
+
+
 if __name__ == '__main__':
     unittest.main()
