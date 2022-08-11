@@ -143,7 +143,7 @@ solution to higher level programming exercises
 
 16. Write the Python function def magic_calculation(a, b, c): that does exactly the same as the following Python bytecode:
 
-| ByteCode | ->                     | Python #1 |
+| ByteCode | ->                     | Python #2 |
 | :------: | :--------------------: | :-------: |
 | 3        | 0 LOAD_FAST            | 0 (a)     |
 |          | 3 LOAD_FAST            | 1 (b)     |
