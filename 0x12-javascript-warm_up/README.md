@@ -109,3 +109,18 @@ solutions to javascript exercises
 
 14. Write a file that modifies the value of myVar to 333
 
+15. Write a function that executes x times a function.
+
+        The function must be visible from outside
+        Prototype: function (x, theFunction)
+        You are not allowed to use var
+
+16. Write a function that increments and calls a function.
+
+        The function must be visible from outside
+        Prototype: function (number, theFunction)
+        You are not allowed to use var
+
+17. Update this script by adding a new function incr that increments the integer value.
+
+        You are not allowed to use var
