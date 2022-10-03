@@ -8,21 +8,15 @@ function convertInt (arr) {
   }
   return (newArr);
 }
+
 function findSecondBiggest (arr) {
-  const a = arr.slice(2);
-  if (a.length === 0 || a.length === 1) {
+  const array = arr.slice(2);
+  if (array.length === 0 || array.length === 1) {
     return (0);
   }
-  const intArray = convertInt(a);
-  let result;
-  const max = Math.max(...intArray);
-  result = intArray[0];
-  for (let i = 0; i < intArray.length; i++) {
-    if (intArray[i] > result && intArray[i] < max) {
-      result = intArray[i];
-    }
-  }
-  return (result);
+  const intArray = convertInt(array);
+  intArray.sort(function (a, b) { return b - a; });
+  return (intArray[1]);
 }
 
 console.log(findSecondBiggest(argv));
