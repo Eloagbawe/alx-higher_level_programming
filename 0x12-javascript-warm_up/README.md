@@ -22,3 +22,15 @@ solutions to javascript exercises
         You must use console.log(...) to print all output
         You are not allowed to use var
     Reference: [process.argv](https://nodejs.org/api/process.html#process_process_argv)
+
+3. Write a script that prints the first argument passed to it:
+
+        If no arguments are passed to the script, print “No argument”
+        You must use console.log(...) to print all output
+        You are not allowed to use var
+        You are not allowed to use length
+
+4. Write a script that prints two arguments passed to it, in the following format: “ is ”
+
+        You must use console.log(...) to print all output
+        You are not allowed to use var
