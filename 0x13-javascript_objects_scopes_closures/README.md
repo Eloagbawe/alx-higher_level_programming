@@ -60,3 +60,13 @@ solutions to javascript exercises
         Prototype: exports.esrever = function (list)
         You are not allow to use the built-in method reverse
 
+9. Write a function that prints the number of arguments already printed and the new argument value. (see example below)
+
+        Prototype: exports.logMe = function (item)
+        Output format: <number arguments already printed>: <current argument value>
+
+10. Write a function that converts a number from base 10 to another base passed as argument:
+
+        Prototype: exports.converter = function (base)
+        You are not allowed to import any file
+        You are not allowed to declare any new variable (var, let, etc..)
