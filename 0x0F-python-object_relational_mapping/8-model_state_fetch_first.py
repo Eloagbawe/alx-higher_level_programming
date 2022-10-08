@@ -23,6 +23,6 @@ if __name__ == "__main__":
     if data:
         print("{}: {}".format(data[0], data[1]))
     else:
-        print("")
+        print("Nothing")
 
     conn.close()
