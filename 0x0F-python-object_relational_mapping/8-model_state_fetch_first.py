@@ -17,7 +17,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     conn = engine.connect()
-    r = conn.execute('SELECT * FROM states ORDER BY states.id ASC')
+    r = conn.execute('SELECT * FROM states')
     data = r.fetchone()
 
     if data:
