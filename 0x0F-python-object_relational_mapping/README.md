@@ -61,3 +61,12 @@ solutions to python ORM exercises
         You can use only execute() once
         Your code should not be executed when imported
 
+6. Write a python file that contains the class definition of a State and an instance Base = declarative_base():
+
+State Class: inherits from Base [Tips](https://docs.sqlalchemy.org/en/13/orm/extensions/declarative/basic_use.html)
+                links to the MySQL table states
+                class attribute id that represents a column of an auto-generated, unique integer, can’t be null and is a primary key
+                class attribute name that represents a column of a string with maximum 128 characters and can’t be null
+        You must use the module SQLAlchemy
+        Your script should connect to a MySQL server running on localhost at port 3306
+        WARNING: all classes who inherit from Base must be imported before calling Base.metadata.create_all(engine)
