@@ -189,3 +189,13 @@ State Class: inherits from Base [Tips](https://docs.sqlalchemy.org/en/13/orm/ext
         You must use the cities relationship for all State objects
         Results must be sorted in ascending order by states.id and cities.id
         Your code should not be executed when imported
+
+17. Write a script that lists all City objects from the database hbtn_0e_101_usa
+
+        Your script should take 3 arguments: mysql username, mysql password and database name
+        You must use the module SQLAlchemy
+        Your script should connect to a MySQL server running on localhost at port 3306
+        You must use only one query to the database
+        You must use the state relationship to access to the State object linked to the City object
+        Results must be sorted in ascending order by cities.id
+        Your code should not be executed when imported
