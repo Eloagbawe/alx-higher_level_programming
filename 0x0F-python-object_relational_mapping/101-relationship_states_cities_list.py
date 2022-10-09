@@ -25,11 +25,10 @@ if __name__ == "__main__":
     session = Session()
     list = session.query(State).order_by(State.id).all()
 
-
     for state in list:
         print("{}: {}".format(state.id, state.name))
         for city in state.cities:
-            print("\t", end = "")
+            print("\t", end="")
             print("{}: {}".format(city.id, city.name))
     session.close()
     conn.close()
