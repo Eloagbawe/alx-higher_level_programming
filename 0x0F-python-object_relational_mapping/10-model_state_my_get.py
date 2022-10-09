@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""script that lists all State objects that contain
-    the letter a from the database hbtn_0e_6_usa
+"""script that that prints the State object
+    with the name passed as argument from the
+    database hbtn_0e_6_usa
 """
 
 from importlib.metadata import metadata
@@ -23,11 +24,13 @@ if __name__ == "__main__":
     conn = engine.connect()
     Session = sessionmaker(bind=engine)
     session = Session()
-    list = session.query(State)
-    list = list.filter(State.name.ilike('%a%')).order_by(State.id)
+    state = session.query(State).filter_by(name=sys.argv[4]).all()
 
-    for item in list:
-        print("{}: {}".format(item.id, item.name))
+    if len(state) == 0:
+        print("Not found")
+    else:
+        for item in state:
+            print(item.id)
 
     session.close()
     conn.close()
