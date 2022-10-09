@@ -5,7 +5,9 @@ from importlib.metadata import metadata
 import sys
 from model_state import Base, State
 
-from sqlalchemy import create_engine, MetaData, select
+from sqlalchemy import create_engine, MetaData
+from sqlalchemy.orm import sessionmaker
+
 
 metadata = MetaData()
 
@@ -17,12 +19,13 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     conn = engine.connect()
-    r = conn.execute('SELECT * FROM states ORDER BY states.id ASC')
-    data = r.fetchone()
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    list = session.query(State)
+    list = list.filter(State.name.ilike('%a%')).order_by(State.id)
 
-    if data:
-        print("{}: {}".format(data[0], data[1]))
-    else:
-        print("Nothing")
+    for item in list:
+        print("{}: {}".format(item.id, item.name))
 
+    session.close()
     conn.close()
