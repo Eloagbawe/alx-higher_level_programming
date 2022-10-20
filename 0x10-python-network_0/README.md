@@ -17,3 +17,8 @@ solutions to python exercises
 3. Write a Bash script that takes in a URL and displays all HTTP methods the server will accept.
 
         You have to use curl
+
+4. Write a Bash script that takes in a URL as an argument, sends a GET request to the URL, and displays the body of the response
+
+        A header variable X-School-User-Id must be sent with the value 98
+        You have to use curl
