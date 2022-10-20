@@ -28,3 +28,9 @@ solutions to python exercises
         A variable email must be sent with the value test@gmail.com
         A variable subject must be sent with the value I will always be here for PLD
         You have to use curl
+
+7. Write a Bash script that sends a request to a URL passed as an argument, and displays only the status code of the response.
+
+        You are not allowed to use any pipe, redirection, etc.
+        You are not allowed to use ; and &&
+        You have to use curl
