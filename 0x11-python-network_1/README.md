@@ -14,3 +14,11 @@ solutions to python exercises
         The value of this variable is different for each request
         You don’t need to check arguments passed to the script (number or type)
         You must use a with statement
+
+2. Write a Python script that takes in a URL and an email, sends a POST request to the passed URL with the email as a parameter, and displays the body of the response (decoded in utf-8)
+
+        The email must be sent in the email variable
+        You must use the packages urllib and sys
+        You are not allowed to import packages other than urllib and sys
+        You don’t need to check arguments passed to the script (number or type)
+        You must use the with statement
