@@ -30,3 +30,9 @@ solutions to python exercises
         You are not allowed to import other packages than urllib and sys
         You don’t need to check arguments passed to the script (number or type)
         You must use the with statement
+
+4. Write a Python script that fetches https://alx-intranet.hbtn.io/status
+
+        You must use the package requests
+        You are not allow to import packages other than requests
+        The body of the response must be display like the following example (tabulation before -)
