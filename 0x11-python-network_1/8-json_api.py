@@ -7,7 +7,7 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    if len(sys.argv == 2):
+    if len(sys.argv) == 2:
         letter = sys.argv[1]
     else:
         letter = ""
