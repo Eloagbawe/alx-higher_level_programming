@@ -47,9 +47,10 @@ solutions to javascript exercises
 7. Write a script that prints all characters of a Star Wars movie:
 
 [Star wars API](https://swapi-api.hbtn.io/)
+        
         The first argument is the Movie ID - example: 3 = “Return of the Jedi”
         Display one character name by line
-        You must use the [Star wars API](https://swapi-api.hbtn.io/)
+        You must use the Star wars API
         You must use the module request
 
 8. Write a script that prints all characters of a Star Wars movie:
